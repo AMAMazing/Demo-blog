@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
     <Head>
         <title>AMA Mazing Blog</title>
-        <meta name="description" content="Blog for projects made by AMA Mazing" />
+        <meta name="description" content="Demo blog made with next.js" />
         <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header/>
