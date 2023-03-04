@@ -179,5 +179,10 @@ img {
   font-size: 2.5em;
 }
 
-
+code {
+  background-color: #161616;
+  border-radius: 8px;
+  display: block;
+  padding: 20px;
+}
 
