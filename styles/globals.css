@@ -184,6 +184,6 @@ code {
   border-radius: 8px;
   display: block;
   padding: 20px;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
