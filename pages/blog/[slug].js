@@ -39,11 +39,6 @@ export default function PostPage({
 }
 
 
-{/* <h1>{title}</h1>
-        <div>
-        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-        </div> */}
-
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('posts'))
 
