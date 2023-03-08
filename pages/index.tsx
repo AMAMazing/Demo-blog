@@ -5,16 +5,22 @@ import Link from 'next/link';
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { sortByDate } from '../utils'
-import Post from '../components/Post'
+import Post from '../components/Post.tsx'
 import { Key } from 'react';
+import Head from 'next/head';
 
-export default function Home({ posts }: any) {
+export default function Home({ posts }: any) { // Creates the homepage and imports all posts from staticprops
   return (
     <div className={styles.container}>
-      {/* */}
-      <div className='posts'> 
-        {posts.map((post: any, index: Key | null | undefined) => ( // 
-          <Post key ={index} post={post} pos={index}/>
+      <Head> 
+          <title>AMA Mazing Blog</title>
+          <meta name="description" content="Demo blog made with next.js" />
+          <link rel="icon" href="\favicon.ico" />
+      </Head>
+
+      <div className='posts'>
+        {posts.map((post: any) => ( // Displays every post in the variable posts
+          <Post post={post} /> // Uses the post component to display post
         ))}
       </div>
       
@@ -22,32 +28,34 @@ export default function Home({ posts }: any) {
   )
 }
 
+// Getstaticprops runs on the server making the website faster
 export async function getStaticProps() {
-  // Get files from the posts dir
+  // Set the path to posts
   const files = fs.readdirSync(path.join('posts'))
 
-  // Get slug and frontmatter from posts
-  const posts = files.map((filename) => {
-    // Create slug
+  // Puts the the list of files in the posts variable
+  const posts = files.map((filename) => { 
+    // Create slug which is the name of the file without the markdown extension
     const slug = filename.replace('.md', '')
 
-    // Get frontmatter
+    // Sets markdownwithmeta to path to post file
     const markdownWithMeta = fs.readFileSync(
       path.join('posts', filename),
       'utf-8'
     )
 
+    // Gets frontmatter of post
     const { data: frontmatter } = matter(markdownWithMeta)
 
     return {
-      slug,
-      frontmatter,
+      slug, // Returns the slug so it can be passed through when clicked in post component
+      frontmatter, // Returns frontmatter to be displayed via the post component
     }
   })
 
   return {
     props: {
-      posts: posts.sort(sortByDate), // Sorts posts by date, and returns them to map
+      posts: posts.sort(sortByDate), // Sorts posts by date in a variable called posts
     },
   }
 }

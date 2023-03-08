@@ -227,7 +227,7 @@ var_dump($array);
 ```
 
 
-```
+
 https://youtu.be/XE4VP_8Y0BU
 [Further reading](https://www.tutorialspoint.com/data_structures_algorithms/quick_sort_algorithm.htm)
 ### Sort & Search timing
@@ -237,4 +237,4 @@ https://youtu.be/XE4VP_8Y0BU
 |Quick sort|O(n\*log<sub>2</sub>n)|O(n<sup>2</sup>)|
 |Linear Seach|O(n/2)|O(n/2)|
 |Binary Search|O(log<sub>2</sub>n|O(log<sub>2</sub>n)|
-```
+

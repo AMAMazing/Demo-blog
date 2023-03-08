@@ -5,7 +5,7 @@ import styles from '/styles/Home.module.css'
 function Header(){    
     return(    
         <div className={styles.container}>    
-            <Link href="/">
+            <Link href="/"> {/* Goes back go home page */}
             <Image // Logo on left
             src="/favicon.ico"
             alt="AMA Mazing logo"

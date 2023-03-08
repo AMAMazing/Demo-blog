@@ -15,7 +15,7 @@ coverimage: '/Images/Rectangle5.png'
 
 
 ## For Loops
-```PHP
+```php
 for ($i = 0; $i <= 12; $i++)
 {
 echo $i . '<br>';
@@ -29,7 +29,7 @@ The final part, $i++, represents the the final expresion and is calculated at th
 
 
 ## Foreach loops
-```PHP
+```php
 // Create an associative array $sports by using the function array().
 $sports = array('Monday' => 'Swimming', 'Tuesday' => 'Gymnastics', 'Wednesday' => 'Karate', 'Thursday' => 'Archery', 'Friday' => 'Basketball');
 
