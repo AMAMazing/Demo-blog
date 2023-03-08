@@ -13,7 +13,7 @@ export default function PostPage({
   // Gets the variables from staticprops
   frontmatter: { title, date, description, coverimage},
   html, 
-}) {
+}: any) {
   return (
     <div className={styles.container}>
       {/* Sets the metadata and title of page to post details */}
@@ -68,7 +68,7 @@ export async function getStaticPaths() {
   }
 }
 // Getstaticprops runs on the server making the website faster
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }: any) {
   // Sets markdownwithmeta to path to post file
   const markdownWithMeta = fs.readFileSync(
     path.join('posts', slug + '.md'),

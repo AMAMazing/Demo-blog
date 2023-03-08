@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { sortByDate } from '../utils'
-import Post from '../components/Post.tsx'
+import Post from '../components/Post.js'
 import { Key } from 'react';
 import Head from 'next/head';
 
@@ -19,8 +19,9 @@ export default function Home({ posts }: any) { // Creates the homepage and impor
       </Head>
 
       <div className='posts'>
-        {posts.map((post: any) => ( // Displays every post in the variable posts
-          <Post post={post} /> // Uses the post component to display post
+       {/* Displays every post in the variable posts */}
+        {posts.map((post: any, index: Key | null | undefined) => ( // key iterator is required but can be set to null
+          <Post key ={index} post={post} /> // Uses the post component to display post, key still required
         ))}
       </div>
       
