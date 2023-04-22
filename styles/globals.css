@@ -4,7 +4,7 @@ html{
   background-color: #323232;
 }
 body {
-  padding: 0;
+  padding: 0px;
   margin: 0;
   font-family: Lexend;
 }
@@ -97,6 +97,7 @@ img {
   font-weight: 100;
   color: #FFFFFF;
   margin-top: 10px;
+  overflow: hidden;
 }
 
 .card:nth-of-type(1) .postdesc {
@@ -171,14 +172,23 @@ img {
 
 .htmltext {
   font-size: 1.5em;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
 }
 
 .htmltext h1 {
   font-size: 2.5em;
 }
 
+iframe {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 16 / 9;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 code {
   background-color: #1e1e1e;
