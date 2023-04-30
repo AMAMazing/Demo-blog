@@ -21,7 +21,8 @@ export default function PostPage({
           <title>{title}</title>
           <meta name="description" content={description} />
           <meta property="og:image" content={coverimage} />
-          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:url" content="amamazing-demo-blog.vercel.app/"/>
           <link rel="icon" href="\favicon.ico" />
       </Head>
 
