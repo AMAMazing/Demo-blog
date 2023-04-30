@@ -21,6 +21,7 @@ export default function PostPage({
           <title>{title}</title>
           <meta name="description" content={description} />
           <meta property="og:image" content={coverimage} />
+          <meta name="twitter:card" content="summary" />
           <link rel="icon" href="\favicon.ico" />
       </Head>
 
