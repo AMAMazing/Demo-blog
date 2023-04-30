@@ -15,6 +15,7 @@ export default function Home({ posts }: any) { // Creates the homepage and impor
       <Head> 
           <title>AMA Mazing Blog</title>
           <meta name="description" content="Demo blog made with next.js" />
+          <meta name="og:image" content="favicon.ico" />
           <link rel="icon" href="\favicon.ico" />
       </Head>
 
