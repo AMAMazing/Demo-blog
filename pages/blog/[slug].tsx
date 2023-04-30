@@ -20,7 +20,7 @@ export default function PostPage({
       <Head>
           <title>{title}</title>
           <meta name="description" content={description} />
-          <meta property="og:image" content={"/Images/Rectangle4.png"} />
+          <meta property="og:image" content={coverimage} />
           <link rel="icon" href="\favicon.ico" />
       </Head>
 
