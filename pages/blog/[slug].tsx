@@ -24,9 +24,10 @@ export default function PostPage({
           <meta property="og:url" content="amamazing-demo-blog.vercel.app/"/>
 
           {/* Twitter metadata */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:account_id" content="767377889004093441" /> {/* https://tweeterid.com/ */}
-          <meta name="twitter:creator" content="@ama_mazing_" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:account_id" content="767377889004093441" /> {/* https://tweeterid.com/ */}
+          <meta property="twitter:creator" content="@ama_mazing_" />
+
 
           
 
