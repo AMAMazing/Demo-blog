@@ -21,8 +21,15 @@ export default function PostPage({
           <title>{title}</title>
           <meta name="description" content={description} />
           <meta property="og:image" content={coverimage} />
-          <meta name="twitter:card" content="summary_large_image" />
           <meta property="og:url" content="amamazing-demo-blog.vercel.app/"/>
+
+          {/* Twitter metadata */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:account_id" content="767377889004093441" /> {/* https://tweeterid.com/ */}
+          <meta name="twitter:creator" content="@ama_mazing_" />
+
+          
+
           <link rel="icon" href="\favicon.ico" />
       </Head>
 
@@ -80,7 +87,7 @@ export async function getStaticProps({ params: { slug } }: any) {
     // Gets frontmatter and content of post
   const { data: frontmatter, content } = matter(markdownWithMeta)
 
-  // Returns everything to PostPage 
+  // Returns everything to PostPage s
   return {
     props: {
       frontmatter,
