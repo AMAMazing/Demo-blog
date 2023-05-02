@@ -19,14 +19,18 @@ export default function PostPage({
       {/* Sets the metadata and title of page to post details */}
       <Head>
           <title>{title}</title>
+          <meta property="og:title" content={title}/>
           <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
           <meta property="og:image" content={coverimage} />
           <meta property="og:url" content="amamazing-demo-blog.vercel.app/"/>
+          
 
           {/* Twitter metadata */}
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:account_id" content="767377889004093441" /> {/* https://tweeterid.com/ */}
-          <meta property="twitter:creator" content="@ama_mazing_" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:account_id" content="767377889004093441" /> {/* https://tweeterid.com/ */}
+          <meta name="twitter:creator" content="@ama_mazing_" />
+          <meta name="twitter:site" content="@ama_mazing_"/>
 
 
           
